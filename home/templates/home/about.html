@@ -23,7 +23,7 @@
 
     <style>
         .bg-image-right-before::before {
-            background-image: url({% static "img/bg/21.jpg"%});
+            background-image: url( "{{ about_us.main_image.url }}");
         }
     </style>
 <!-- BREADCRUMB AREA END -->
@@ -34,19 +34,7 @@
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2--- mb-20">
                             <h1 class="section-title">About us</h1>
-                            <p class="text-justify">CURVONIX goal is to offer quality patent drawings service, in a timely manner, and at a reasonable
-                            cost to the inventers. CURVONIX is a full service patent Illustration company located in INDIA that
-                            serves companies and patent law firms across the US. You will learn that our draftsman have
-                            outstanding illustration skills and expertise in the latest illustration technology. We are qualified to
-                            deliver anything from a simple flow chart to even the most complex mechanical cases and design case
-                            applications.</p>
-
-                            <p>CURVONIX has been in the quality service provider role since 2016. Currently operating
-                            24/7 at 365 days, CURVONIX is looking to establish its client base all over the world. Being
-                            a provider for multiple services CURVONIX has a staff of professional artists. Having
-                            experience prior to their time at CURVONIX, artists at CURVONIX are familiar with using
-                            their skills at full efficiency and constructing a final product according to the client’s
-                            instructions.</p>
+                            <p class="text-justify">{{ about_us.main_content }}</p>
                         </div>
                     </div>
                 </div>
@@ -62,22 +50,13 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-img-wrap about-img-left">
-                        <img src="{% static "img/others/5.jpg" %}" alt="About Us Image">
+                        <img src="{{ about_us.sub_image.url }}" alt="About Us Image">
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2--- mb-30">
-                            <p class="text-justify">Specializing in their roles an illustrator and 3D model provider, CURVONIX has a team of talented and
-                            professional artists who have been in the patent provider market for – years. Supported by our team of
-                            artists, CURVONIX guarantees quality driven excellent work to its clients.
-                            Providing services for their clients, CURVONIX covers its client's needs for flow charts, screenshots,
-                            graphs, utility drawings, mechanical drawings, electric circuit drawings, engineering drawings, design
-                            patents, trademark, chemical and 3D models.
-                            Along with their services CURVONIX focuses on client satisfaction and maximum service
-                            adequacy. Gearing towards providing more and more clients with their services, CURVONIX is
-                            always welcoming to new clients and is open to accepting every type of service order
-                            </p>
+                            <p class="text-justify">{{ about_us.sub_content }}</p>
                         </div>                        
                     </div>
                 </div>
