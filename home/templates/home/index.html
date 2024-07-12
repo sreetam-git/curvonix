@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="ltn__utilize-overlay"></div>
+<!-- SLIDER AREA START (slider-3) -->
+<div class="ltn__slider-area ltn__slider-3  section-bg-2">
+    <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
+        <!-- ltn__slide-item -->
+         {% for slider in sliders %}
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{{ slider.image.url }}">
+                <div class="ltn__slide-item-inner text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <h1 class="slide-title animated ">{{ slider.title }}</h1>
+                                        <div class="btn-wrapper animated">
+                                            <a href="#" class="theme-btn-1 btn btn-effect-1">Make An Enquiry</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         {% endfor %}
+        
+        <!--  -->
+    </div>
+</div>
+<!-- SLIDER AREA END -->
+ <!-- ABOUT US AREA START -->
+ <div class="ltn__about-us-area pt-115 pb-100 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="about-us-img-wrap about-img-left">
+                    <img src="{{ about_us.image_one.url }}" alt="About Us Image">
+                </div>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="about-us-info-wrap">
+                    <div class="section-title-area ltn__section-title-2--- mb-30">
+                        <h6 class="section-subtitle section-subtitle-2--- ltn__secondary-color">About Us</h6>
+                        <h1 class="section-title">Who we are..?</h1>
+                        <p class="text-justify">
+                            {{ about_us.home_content }}
+                        </p>
+                        </div>                        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ABOUT US AREA END -->
+<!-- ABOUT US AREA START -->
+<div class="ltn__about-us-area section-bg-1 bg-image-right-before pt-120 pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="about-us-info-wrap">
+                    <div class="section-title-area ltn__section-title-2--- mb-20">
+                        <h1 class="section-title">What We Do</h1>
+                        <p class="text-justify">
+                            {{ about_us.what_we_do_content }}
+                        </p>
+                    </div>
+                    <ul class="ltn__list-item-half ltn__list-item-half-2 list-item-margin clearfix">
+                        <li>
+                            <i class="icon-done"></i>
+                            Mechanical Drawing
+                        </li>
+                        <li>
+                            <i class="icon-done"></i>
+                             Flowchart
+                        </li>
+                        <li>
+                            <i class="icon-done"></i>
+                            Utility Patent Drawings
+                        </li>
+                        <li>
+                            <i class="icon-done"></i>
+                            Design Patent
+                        </li>
+                        <li>
+                            <i class="icon-done"></i>
+                              Screenshots
+                        </li>
+                        <li>
+                            <i class="icon-done"></i>
+                            Trademark
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="about-us-img-wrap about-img-left">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ABOUT US AREA END -->
+
+<!-- BRAND LOGO AREA START -->
+<div class="ltn__brand-logo-area ltn__brand-logo-1 section-bg-1 pt-290 pb-110 plr--9 d-none">
+    <div class="container-fluid">
+        <div class="row ltn__brand-logo-active">
+            
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="" alt="Brand Logo">
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<!-- BRAND LOGO AREA END -->
+
+<!-- BLOG AREA START (blog-3) -->
+<div class="ltn__blog-area  pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2--- text-center">
+                    <h1 class="section-title">Services</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row  ltn__blog-slider-one-active slick-arrow-1 ltn__blog-item-3-normal">
+            <!-- Blog Item -->
+            {% for service in services %}
+            <!-- Blog Item -->
+            <div class="col-lg-12">
+                <div class="ltn__blog-item ltn__blog-item-3">
+                    <div class="ltn__blog-img">
+                        <a href="#"><img src="{{ service.image.url }}" alt="#"></a>
+                    </div>
+                    <div class="ltn__blog-brief">
+                        <h3 class="ltn__blog-title text-center"><a href="#">{{ service.title }}</a></h3>
+                        <div class="ltn__blog-meta-btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+            <!--  -->
+        </div>
+    </div>
+</div>
+<!-- BLOG AREA END -->
+
+<!-- TESTIMONIAL AREA START (testimonial-7) -->
+<div class="ltn__testimonial-area section-bg-1--- bg-image-top pt-115 pb-70" data-bs-bg="img/bg/20.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2--- text-center">
+                    <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Testimonial</h6>
+                    <h1 class="section-title">Clients Feedback</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__testimonial-slider-5-active slick-arrow-1">
+            {% for row in feedbacks %}
+            <div class="col-lg-4">
+                <div class="ltn__testimonial-item ltn__testimonial-item-7">
+                    <div class="ltn__testimoni-info">
+                        <p><i class="flaticon-left-quote-1"></i> 
+                            {{ row.comment }}    
+                        </p>
+                        <div class="ltn__testimoni-info-inner">
+                            <div class="ltn__testimoni-img">
+                                <img src="{{ row.image.url }}" alt="#">
+                            </div>
+                            <div class="ltn__testimoni-name-designation">
+                                <h5>{{ row.name }}</h5>
+                                <label>{{ row.designation }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!--  -->
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
